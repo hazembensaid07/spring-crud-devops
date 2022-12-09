@@ -4,7 +4,7 @@ COPY pom.xml /home/app
 RUN mvn -f /home/app/pom.xml clean package
 
 #
-# Package stage
+# Package stagee
 #
 FROM openjdk:11-jre-slim
 COPY --from=build /home/app/target/spring-boot-jpa-postgresql-*.jar /usr/local/lib/spring-boot-jpa-postgresql-*.jar
